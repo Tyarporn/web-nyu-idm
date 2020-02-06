@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<!-- this is the head. it contains all of the meta data for the document.  -->
+<head>
+  <!-- this is the title. it is necessary as it defines what the document is. it also is useful in naming the document in a browser tag -->
+  <title>Ty_Here_Come_the_Planes</title>
+  <!-- this is a script tag. i put this here in order to run the script that takes the src for p5.js, allowing me to use the p5 library
+creds to p5.org and my last semester teacher for showing me how to do this-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <!-- this is a style tag in which i define all of my css, being a good student and not defining my css inline
+  ...but not being a GREAT student as i don't have a proper separate css folder -->
+  <style>
+    /* CSS goes here */ /*<----teacher's comment*/
+    /* this body modifier allows me to make edits to all of the text in the body */
+    body {
+      /* this changes the background color to black */
+      background-color: black;
+      /* this changes text color to cyan */
+      color: cyan;
+      /* this modifier allows me to center my text */
+      text-align: center;
+      /* this allows me to change the size of the font used. I changed it to 50 pixels */
+      font-size: 50px;
+      /* this allows me to change the font type. I chose the futura font */
+      font-family: futura;
+    }
+      /* this allows me to modify the items in body with the id "secondAh" */
+    #secondAh {
+      /* this allows me to change the size of the font used. I changed it to 40 pixels */
+      font-size: 40px;
+      /* this changes text color to lawngreen */
+      color: lawngreen;
+    }
+      /* this allows me to modify the items in body with the id "thirdAh" */
+    #thirdAh {
+      /* this allows me to change the size of the font used. I changed it to 25 pixels */
+      font-size: 25px;
+      /* this changes text color to violet...go violets! */
+      color: violet;
+    }
+      /* this allows me to modify the items in body with the id "lastAh" */
+    #lastAh {
+      /* this allows me to change the size of the font used. I changed it to 20 pixels */
+      font-size: 20px;
+      /* this changes text color to navajo white */
+      color: navajowhite;
+    }
+      /* this allows me to modify the items in body with the keyboard tag attached */
+    kbd {
+      /* this modifier allows me to animate the text with the keyboard tag, for 5 seconds each time, infinitly
+      creds to w3schools.com for this and the keyframes that define it*/
+      animation: colorChange 5s infinite;
+    }
+    /* this allows me to define what the keyframes "color change" means (to change color) */
+    @keyframes colorChange {
+      /* this changes the text color from a starting medium sea green... */
+      from {
+        color: mediumseagreen;
+      }
+      /* ...to a final slateblue */
+      to {
+        color: slateblue;
+      }
+    }
+    /* this lets me stylize my button! creds to w3schools.com*/
+    button {
+      /* this makes it such that there is no border for the button object */
+      border: none;
+      /* this changes the background color to black as it inherits the background color from body */
+      background-color: inherit;
+      /* this property allows me to change the space around the main content of the button */
+      padding: 14px 28px;
+      /* this changes the font size of the text in the button */
+      font-size: 25px;
+      /* this changes the cursor to the pointer grpahic when hovering over the button (w3schools.com!) */
+      cursor: pointer;
+      /* makes the button fit in a larger place in a line than it should take  */
+      display: inline-block;
+      /* adjusts the boder of the button */
+      border-radius: 16px;
+      /* adjusts the margins of the button */
+      margin: 4px 2px;
+
+    }
+    /* activates an animation when the cursor hovers over the button */
+    .btn:hover {
+      /* changes the background color */
+      background: Chartreuse;
+      /* changes the opacity (how see-through something is) */
+      opacity: 0.5;
+      /* rotates the button 180 degs so it looks like its hanging upside down */
+      transform: rotate(180deg)
+    }
+    /* modifies the button's text */
+    .Ah {
+      /* changes text in the button to red */
+      color: red;
+    }
+    /* creds to w3schools.com**
+    makes an element that sticks to the top of the page*/
+    div.sticky {
+      /* adjusts position like sticky but for safari! */
+      position: -webkit-sticky;
+      /* makes the sticky object appear where the user scrolled */
+      position: sticky;
+      /* affects the position of the top of the element */
+      top: 0;
+      /* this property allows me to change the space around the main content of the button */
+      padding: 5px;
+      /* changes the border to black and allows me to color the banner blue */
+      background-color: black border: 2px solid blue;
+      /* changes the color of the text to white */
+      color: white;
+    }
+
+    /* CSS STOPS here <----teacher's comment*/
+  </style>
+  <!-- end of the head tag -->
+</head>
+<!-- HTML goes here! -->
+<!-- starts the body portion of the website -->
+<body>
+  <!-- imports the script of the p5.js sketch i made for this project -->
+  <script src="Ah.js"></script>
+  <!-- creates the first header and ids it as "firstAh" -->
+  <h1 id="firstAh">Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah</h1>
+  <!-- creates a sticky element that follows the top of the screen after you scroll past it -->
+  <div class="sticky">Ah</div>
+  <!-- creates a paragraph and ids it as "secondAh" -->
+  <p id="secondAh">Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah</p>
+  <!-- creates a paragraph and ids it as "thirdAh", styling it as emphasized text -->
+  <p id="thirdAh"><em>Ah Ah Ah Ah Ah Ah Ah Ah</em></p>
+  <!-- creates the second heading with the id of "lastAh", styling it with code font -->
+  <h2 id="lastAh"><code>Ah Ah</code></h2>
+  <!-- creates a text styled with keyboard font  -->
+  <kbd> Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah Ah</kbd>
+  <!-- creates a paragraph solely consisting of a button with the class Ah and the bold text "Ah".
+  this button also displays the message "Ah Ah Ah" upon clicking -->
+  <p> <button class="btn Ah" onclick="alert('Ah Ah Ah')"><b>Ah</b></button></p>
+  <!-- ends the body section of the code -->
+</body>
+<!-- separates this section for the superman class -->
+<div id="Superman">
+  <!-- css code for the superman part (bc i felt like dividing the ahs from the only other words in my section of the song) -->
+  <style>
+  /* modifiers for a (link) */
+    a {
+      /* changes link color to yellow */
+      color: Yellow;
+      /* adds a black shadow of the text that is 5px long nd 7px wide */
+      text-shadow: 5px 7px Black;
+      /* changes the font's size to 3em (uses em to increase/decrease proportionally)*/
+      font-size: 3em;
+      /* makes the font oblique (not transparent at all) */
+      font-style: oblique;
+    }
+/* adds modifiers to a when the cursor hovers over it */
+    a:hover {
+      /* changes the color of a to crimson */
+      color: crimson;
+      /* changes the font size to 3 times the usual size */
+      font-size: 3em;
+    }
+    /* ends the styling for superman */
+  </style>
+  <!-- adds bottom elements to the page -->
+  <footer>
+    <!-- adds an inline link to the next page in the webring with the the text "O Superman" which is stylized as strong -->
+    <a href="https://simbayona.github.io/web-nyu-idm/here-come-the-planes"><strong>O Superman</strong></a>
+    <!-- ends the footer part of the code -->
+  </footer>
+  <!-- denotes the end of the superman class -->
+</div>
+<!-- end of the html part of the doc! -->
+</html>
+<!-- HTML STOPS here! -->
