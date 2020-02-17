@@ -32,6 +32,12 @@ p1 > b, p2 > b, p3 > b{/*here i am addressing the bold text in p1, p2, and p3. t
   font-family: verdana;
 }
 
+strong:only-child{
+  color: crimson;
+  font-style: italic;
+  font-family: verdana;/*here i address all code with only a strong tag in it. it changes the color to crimson, the style to italic, and the family to verdana. i learned this from lesson 16.*/
+}
+
 
  /* .my-fun-class {
   width: 40%;
