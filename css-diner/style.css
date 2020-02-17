@@ -24,8 +24,12 @@ body {/*this tags the body objects. it changes the items under body i learned th
 }
 .menu{/*this is me tagging the menu class. it changes things under the menu class. i learned this from lesson 6*/
   color: yellow;
-
   font-size: 2em;
+}
+p1 > b, p2 > b, p3 > b{/*here i am addressing the bold text in p1, p2, and p3. this code changes the bold to orange, italic, verdana font. i learned this from lesson 14*/
+  color: orange;
+  font-style: italic;
+  font-family: verdana;
 }
 
 
