@@ -26,7 +26,7 @@ body {/*this tags the body objects. it changes the items under body i learned th
   color: yellow;
   font-size: 2em;
 }
-p1 > b, p2 > b, p3 > b{/*here i am addressing the bold text in p1, p2, and p3. this code changes the bold to orange, italic, verdana font. i learned this from lesson 14*/
+p1 > b{/*here i am addressing the bold text in p1, p2, and p3. this code changes the bold to orange, italic, verdana font. i learned this from lesson 14*/
   color: orange;
   font-style: italic;
   font-family: verdana;
@@ -35,18 +35,15 @@ p1 > b, p2 > b, p3 > b{/*here i am addressing the bold text in p1, p2, and p3. t
 strong:only-child{
   color: crimson;
   font-style: italic;
-  font-family: verdana;/*here i address all code with only a strong tag in it. it changes the color to crimson, the style to italic, and the family to verdana. i learned this from lesson 16.*/
+  font-family: verdana;/*here i address all code with only a strong tag in it. it changes the color to crimson, the style to italic, and the family to verdana. i learned this from lesson 16*/
 }
 
-
- /* .my-fun-class {
-  width: 40%;
-  border: 2px solid forestgreen;
-  display: block;
-  margin: auto;
+p2 var:only-of-type, p2 var:only-of-type{/*here i adress only the var types in p7 and p8. it changes the color to cornsilk, the style to italic, and the family to verdana. i learned this lesson from lesson 23*/
+  color: cornsilk;
+  font-style: italic;
+  font-family: verdana;
 }
-
-img {
- width: 40%;
-  padding: 6em;
- }  */
+img{
+  max-width: 20%;
+  max-height: 20%;
+}
