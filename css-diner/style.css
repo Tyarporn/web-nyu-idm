@@ -17,15 +17,19 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
-body {
-  background-color: violet;
-  color: yellow;
+body {/*this tags the body objects. it changes the items under body i learned this from lesson 1*/
+  background-color: black;
   text-align: center;
+  color: red;
+}
+.menu{
+  color: yellow;
+
   font-size: 2em;
 }
 
-.my-fun-class {
+
+ /* .my-fun-class {
   width: 40%;
   border: 2px solid forestgreen;
   display: block;
@@ -33,6 +37,6 @@ body {
 }
 
 img {
-  width: 40%;
-  padding: 2em;
-}
+ width: 40%;
+  padding: 6em;
+ }  */
