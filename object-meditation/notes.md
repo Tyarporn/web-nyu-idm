@@ -38,7 +38,7 @@ it also provides me comfort knowing that i will always have a place to call home
 ### What is a specific memory you have with this object?
 so this object was sold in a type of general store in the heart of my hometown. i frequented the store often, but never really
 paid attention to it until i knew that i would be spending the next four years of my life in new york. at that moment, i realized
-that i actually like my hometown a lot more than i thought i did. 
+that i actually like my hometown a lot more than i thought i did.
 
 
 
@@ -50,7 +50,7 @@ that i actually like my hometown a lot more than i thought i did.
 
 
 
-
+#---test stuff---
 # this is the biggest header(h1)
 ## h2
 ### h3

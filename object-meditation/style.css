@@ -17,10 +17,19 @@ body {
 
 body {
   background-color: cornsilk;
-  color: brown;
+  color: sienna;
   text-align: center;
   font-size: 2em;
   font-family: georgia;
+  height: 100%;
+width: 100%;
+/* display: flex;
+position: fixed;
+align-items: center;
+justify-content: center; */
+}
+p {
+  color: brown;
 }
 
 .my-fun-class {
