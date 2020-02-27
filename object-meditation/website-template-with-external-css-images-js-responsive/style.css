@@ -8,18 +8,19 @@ body {
   box-sizing: inherit;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'violet';
   src: url('./fonts/VioletSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
-  background-color: white;
+  background-color: cornsilk;
   color: brown;
   text-align: center;
   font-size: 2em;
+  font-family: georgia;
 }
 
 .my-fun-class {
