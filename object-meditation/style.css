@@ -31,6 +31,33 @@ justify-content: center; */
 p {
   color: brown;
 }
+a{
+  color:brown;
+  text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.white {
+  max-width: 10%;
+  max-height: 10%;
+}
+.brown {
+  max-width: 10%;
+  max-height: 10%;
+}
+.pink {
+  max-width: 10%;
+  max-height: 10%;
+}
+
+#eggs{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
 .my-fun-class {
   width: 50%;
