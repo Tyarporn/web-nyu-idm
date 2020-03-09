@@ -22,7 +22,7 @@ body {
   font-size: 2em;
   font-family: georgia;
   height: 100%;
-width: 100%;
+  width: 100%;
 /* display: flex;
 position: fixed;
 align-items: center;
@@ -59,7 +59,7 @@ img {
   align-items: flex-end;
 }
 
-.my-fun-class {
+.temp{
   width: 50%;
   border: 2px solid black;
   display: block;
@@ -68,6 +68,14 @@ img {
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    background-color: navy;
+    color: cornsilk;
+  }
+  a{
+    color: inherit;
+  }
+  button{
+    font-family: georgia;
+    color: cornsilk;
   }
 }
