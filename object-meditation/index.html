@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
+
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script language="Javascript" src="bundle.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script language="Javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   <title>where do you come from?</title>
 </head>
 <body>
     <h1 id="welcome">hi there</h1>
     <div id="city-prompt">
-      <p3>where are you from<a href="egg.html">?</a></p3><br>
+      <p3 id = "question">where are you from<a href="egg.html">?</a></p3><br>
       <input type="text" id="city">
       <br>
-      <button id="submit" onclick= "displayCard()">submit</button>
+      <button id="submit" onclick= "displayCard(); getNews()">submit</button>
     </div>
-    <img id = "cityPic" src="assets/city-test.png"></img>
+    <img id = "cityPic" src="assets/city-test.png"></img><br>
     <button id ="back" onclick="revert()">back</button>
 </body>
 
