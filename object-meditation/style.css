@@ -77,5 +77,6 @@ img {
   button{
     font-family: georgia;
     color: cornsilk;
+    text-decoration-color: black;
   }
 }
