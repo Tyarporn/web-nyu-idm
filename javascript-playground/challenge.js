@@ -26,6 +26,9 @@ let colors = ["red", "orange", "yellow", "green", "blue"];
 // push your edits to github!!
 
 // 5.  Console.log each item in the array
+for(i = 0; i < myColors.length; i++){
+  console.log(myColors[i]);
+}
 // push your edits to github!!
 
 // 6. Declare an empty string variable called 'text'. Each time you console.log a color from the above challenge number 2, add your color to this variable.
