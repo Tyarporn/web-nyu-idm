@@ -13,6 +13,12 @@ function getLength(array){
 // push your edits to github!!
 
 // 3. Within the function also use an if-conditional statement that checks if the number of items within the array are less than 4
+function length4(array){
+  if(array.length < 4)
+    console.log("True!");
+  else
+  console.log("False D:");
+}
 // push your edits to github!!
 
 // 4. Declare and initialize an array called 'colors' with 5 different string values representing the names of 5 colors of your choosing
