@@ -26,8 +26,8 @@ let colors = ["red", "orange", "yellow", "green", "blue"];
 // push your edits to github!!
 
 // 5.  Console.log each item in the array
-for(i = 0; i < myColors.length; i++){
-  console.log(myColors[i]);
+for(i = 0; i < colors.length; i++){
+  console.log(colors[i]);
 }
 // push your edits to github!!
 

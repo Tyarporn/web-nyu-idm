@@ -61,6 +61,7 @@ function getNews() {
         page: 1
       }).then(response => {
         console.log(response);
+        $("#newsTest").html(response)
       });
       //PAST THIS IS ALL BROWSERIFY CODE
 
