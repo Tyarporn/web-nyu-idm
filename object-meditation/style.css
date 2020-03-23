@@ -70,6 +70,41 @@ img {
 text-align: left;
 }
 
+#newsButton{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+button{
+  box-shadow:inset 0px 1px 3px 0px #91b8b3;
+  background:linear-gradient(to bottom, brown 5%, sienna 100%);
+  background-color:#768d87;
+  border-radius:5px;
+  border:1px solid #566963;
+  display:inline-block;
+  cursor:pointer;
+  color:white;
+  font-family:georgia;
+  font-size:15px;
+  font-weight:bold;
+  padding:11px 23px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #2b665e;
+}
+
+#city{
+  width: 20%;
+  background-color: white;
+  color: grey;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: text;
+}
+
+
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: navy;
