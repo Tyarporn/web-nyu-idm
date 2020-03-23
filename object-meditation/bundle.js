@@ -51,7 +51,7 @@ function getNews(){
   $("#weatherTable").hide();
   $("#newsTest").show();
   var city = document.getElementById("city").value.toString();
-  fetch("http://newsapi.org/v2/everything?q=" + city + "&apiKey=9fac62d0f8d24cd88ec3c1f6bd10cff0")
+  fetch("https://newsapi.org/v2/everything?q=" + city + "&apiKey=9fac62d0f8d24cd88ec3c1f6bd10cff0")
     .then(response => {
       return response.json();
     })
