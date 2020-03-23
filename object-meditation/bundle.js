@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#back").hide();
   $("#cityPic").hide();
+  $("#news").hide();
 });
 
 
@@ -11,14 +12,20 @@ function displayCard() {
   $("#submit").hide();
   $("#back").show();
   $("#cityPic").show();
+  $("#news").show();
+  $("newsTest").show();
+
 }
 
 function revert() {
-  $("#welcome").html('hi there');
-  $("#city-prompt").show();
-  $("#submit").show();
-  $("#back").hide();
-  $("#cityPic").hide();
+  // $("#welcome").html('hi there');
+  // $("#city-prompt").show();
+  // $("#submit").show();
+  // $("#back").hide();
+  // $("#cityPic").hide();
+  // $("#news").hide();
+  // $("#newsTest").hide();
+  location.reload();
 }
 
 function getNews() {
@@ -61,7 +68,17 @@ function getNews() {
         page: 1
       }).then(response => {
         console.log(response);
-        $("#newsTest").html(response)
+        var newsTitles = [];
+        var newsString = "";
+        var newsLink = [];
+        for(i = 0; i < response.articles.length; i++){
+          console.log(response.articles[i].title);
+          newsTitles.push(response.articles[i].title);
+          newsLink.push(response.articles[i].url);
+        }
+        for(i = 0; i < newsTitles.length; i++)
+        newsString= newsString + (i+1) + ". " +"<a href="  + newsLink[i] + ">" + newsTitles[i]+ "</a>" + "<br>";
+        $("#newsTest").html(newsString);
       });
       //PAST THIS IS ALL BROWSERIFY CODE
 
