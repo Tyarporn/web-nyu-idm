@@ -11,7 +11,7 @@ body {
   font-family: georgia;
   height: 100%;
   width: 100%;
-  background-image: url("assets/bruno-wolff-l5-za_iUUdA-unsplash.jpg");
+  background-image: url("assets/marietta-square-night.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -31,28 +31,6 @@ img {
   height: auto;
 }
 
-.white {
-  max-width: 10%;
-  max-height: 10%;
-}
-
-.brown {
-  max-width: 10%;
-  max-height: 10%;
-}
-
-.pink {
-  max-width: 10%;
-  max-height: 10%;
-}
-
-#eggs {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 .temp {
   width: 50%;
   border: 2px solid black;
@@ -60,23 +38,6 @@ img {
   margin: auto;
 }
 
-#newsTest {
-  text-align: left;
-}
-
-#newsButton {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  color: grey;
-}
-
-#weatherButton {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  color: skyblue;
-}
 
 button {
   box-shadow: inset 0px 1px 3px 0px #91b8b3;
@@ -95,16 +56,6 @@ button {
   text-shadow: 0px -1px 0px #2b665e;
 }
 
-#city {
-  width: 20%;
-  background-color: white;
-  color: grey;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: text;
-}
 
 @media only screen and (max-width: 600px) {
   body {
