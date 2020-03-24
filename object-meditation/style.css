@@ -1,98 +1,101 @@
 html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* @font-face {
-  font-family: 'violet';
-  src: url('./fonts/VioletSans-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
 body {
   background-color: cornsilk;
-  color: sienna;
+  color: cornsilk;
   text-align: center;
   font-size: 2em;
   font-family: georgia;
   height: 100%;
   width: 100%;
-/* display: flex;
-position: fixed;
-align-items: center;
-justify-content: center; */
+  background-image: url("assets/bruno-wolff-l5-za_iUUdA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
+
 p {
-  color: brown;
+  color: cornsilk;
 }
-a{
-  color:brown;
+
+a {
+  color: cornsilk;
   text-decoration: none;
 }
+
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 .white {
   max-width: 10%;
   max-height: 10%;
 }
+
 .brown {
   max-width: 10%;
   max-height: 10%;
 }
+
 .pink {
   max-width: 10%;
   max-height: 10%;
 }
 
-#eggs{
+#eggs {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.temp{
+.temp {
   width: 50%;
   border: 2px solid black;
   display: block;
   margin: auto;
 }
 
-#newsTest{
-text-align: left;
+#newsTest {
+  text-align: left;
 }
 
-#newsButton{
-    display:flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-button{
-  box-shadow:inset 0px 1px 3px 0px #91b8b3;
-  background:linear-gradient(to bottom, brown 5%, sienna 100%);
-  background-color:#768d87;
-  border-radius:5px;
-  border:1px solid #566963;
-  display:inline-block;
-  cursor:pointer;
-  color:white;
-  font-family:georgia;
-  font-size:15px;
-  font-weight:bold;
-  padding:11px 23px;
-  text-decoration:none;
-  text-shadow:0px -1px 0px #2b665e;
+#newsButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: grey;
 }
 
-#city{
+#weatherButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: skyblue;
+}
+
+button {
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, cornsilk 5%, white 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: georgia;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+}
+
+#city {
   width: 20%;
   background-color: white;
   color: grey;
@@ -103,17 +106,17 @@ button{
   cursor: text;
 }
 
-
-
 @media only screen and (max-width: 600px) {
   body {
     background-color: navy;
     color: cornsilk;
   }
-  a{
+
+  a {
     color: inherit;
   }
-  button{
+
+  button {
     font-family: georgia;
     color: cornsilk;
     text-decoration-color: black;

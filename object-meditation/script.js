@@ -1,85 +1,83 @@
-//
-// let weatherApi= "api.openweathermap.org/data/2.5/weather?q=";
-// let cityName = "New York";
-// let weatherApiKey = "39031965238faf9cf2930953024067c4";
-// let weatherUrl = weatherApi + cityName + "&appid=" + weatherApiKey;
-let newsApi = 'http://newsapi.org/v2/everything?q=';
-let city = 'Apple';
-let newsApiKey = '&from=2020-03-09&sortBy=popularity&apiKey=9fac62d0f8d24cd88ec3c1f6bd10cff0';
-let newsUrl = newsApi + city + newsApiKey;
 
 $(document).ready(function() {
   $("#back").hide();
   $("#cityPic").hide();
+  $("#newsButton").hide();
+  $("#weatherButton").hide();
+  $("#weatherName").hide();
+  $("#weatherTable").hide();
 });
 
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('9fac62d0f8d24cd88ec3c1f6bd10cff0');
-// To query /v2/top-headlines
-// All options passed to topHeadlines are optional, but you need to include at least one of them
-newsapi.v2.topHeadlines({
-  sources: 'bbc-news,the-verge',
-  q: 'bitcoin',
-  category: 'business',
-  language: 'en',
-  country: 'us'
-}).then(response => {
-  console.log(response);
-  /*
-    {
-      status: "ok",
-      articles: [...]
-    }
-  */
-});
-// To query /v2/everything
-// You must include at least one q, source, or domain
-newsapi.v2.everything({
-  q: 'bitcoin',
-  sources: 'bbc-news,the-verge',
-  domains: 'bbc.co.uk, techcrunch.com',
-  from: '2017-12-01',
-  to: '2017-12-12',
-  language: 'en',
-  sortBy: 'relevancy',
-  page: 2
-}).then(response => {
-  console.log(response);
-  /*
-    {
-      status: "ok",
-      articles: [...]
-    }
-  */
-});
-// To query sources
-// All options are optional
-newsapi.v2.sources({
-  category: 'technology',
-  language: 'en',
-  country: 'us'
-}).then(response => {
-  console.log(response);
-  /*
-    {
-      status: "ok",
-      sources: [...]
-    }
-  */
-});
-
-function displayCard() {
+function displayCard(){//dA0uSGspAyNddUPTVDTbyPQLqYhwkUvyjul2KatTooM
   var city = document.getElementById("city").value;
-  $("#welcome").html('you have a lovely home in ' + city);
-  $("#city-prompt").hide();
-  $("#submit").hide();
-  $("#back").show();
-  $("#cityPic").show();
+  var bkgImageURL = "assets/bruno-wolff-l5-za_iUUdA-unsplash.jpg";
+  fetch("https://api.unsplash.com/search/photos/?query=" + city +"&client_id=dA0uSGspAyNddUPTVDTbyPQLqYhwkUvyjul2KatTooM")
+  .then(response => {
+    return response.json();
+  })
+  .then(response => {
+    console.log(response);
+    bkgImageURL = response.results[0].urls.full;
+    console.log(bkgImageURL)
+    $("#welcome").html('i hear ' + city + ' is lovely this time of year' + '<a href= marietta.html>.</a>');
+    $("#city-prompt").hide();
+    $("#submit").hide();
+    $("#back").show();
+    $("#cityPic").show();
+    $("#newsButton").show();
+    $("newsTest").show();
+    $("#weatherButton").show();
+    $("body").css("background-image", "url(" + bkgImageURL + ")");
+  })
+
 }
+
 function revert() {
-  $("#welcome").html('hi there');
-  $("#city-prompt").show();
-  $("#submit").show();
-  $("#back").hide();
-  $("#cityPic").hide();
+  location.reload();
+}
+
+function getWeather(){//api.openweathermap.org/data/2.5/weather?q=NewYork&appid=39031965238faf9cf2930953024067c4
+  $("#newsTest").hide();
+var city = document.getElementById("city").value.toString();
+fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=39031965238faf9cf2930953024067c4")
+  .then(response => {
+    return response.json();
+  })
+  .then(response => {
+    console.log(response);
+    $("#name").html(response.name);
+    $("#CityName").html(response.name);
+    $("#Temperature").html(response.main.temp + " F");
+    $("#Humidity").html(response.main.humidity + " %");
+    $("#Pressure").html(response.main.pressure + " hPa");
+    $("#WindSpeed").html(response.wind.speed + " mph");
+    $("#Weather").html(response.weather[0].description);
+  })
+  $("#weatherName").show();
+  $("#weatherTable").show();
+}
+
+function getNews(){
+  $("#weatherName").hide();
+  $("#weatherTable").hide();
+  $("#newsTest").show();
+  var city = document.getElementById("city").value.toString();
+  fetch("https://newsapi.org/v2/everything?q=" + city + "&apiKey=9fac62d0f8d24cd88ec3c1f6bd10cff0")
+    .then(response => {
+      return response.json();
+    })
+    .then(response => {
+      console.log(response);
+      var newsTitles = [];
+      var newsString = "";
+      var newsLink = [];
+      for(i = 0; i < response.articles.length; i++){
+        console.log(response.articles[i].title);
+        newsTitles.push(response.articles[i].title);
+        newsLink.push(response.articles[i].url);
+      }
+      for(i = 0; i < newsTitles.length; i++)
+      newsString= newsString + (i+1) + ". " +"<a href="  + newsLink[i] + ">" + newsTitles[i]+ "</a>" + "<br>";
+      $("#newsTest").html(newsString);
+    })
 }
