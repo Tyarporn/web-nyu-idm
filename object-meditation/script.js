@@ -81,3 +81,34 @@ function getNews(){
       $("#newsTest").html(newsString);
     })
 }
+
+function lightMode(){
+  $('body').css('color', 'antiquewhite');
+  $('body').css('font-family', 'georgia');
+  $('p').css('color', 'antiquewhite');
+  $('a').css('color', 'antiquewhite');
+  $('button').css('background', 'linear-gradient(to bottom, antiquewhite 5%, white 100%)')
+  $('button').css('font-family', 'georgia');
+  $('button').css('color', 'black');
+}
+
+function darkMode(){
+  $('body').css('color', 'midnightblue');
+  $('body').css('font-family', 'futura');
+  $('p').css('color', 'midnightblue');
+  $('a').css('color', 'midnightblue');
+  $('button').css('background', 'linear-gradient(to bottom, blue 5%, midnightblue 100%)')
+  $('button').css('font-family', 'futura');
+  $('button').css('color', 'cornsilk');
+}
+
+function colorfulMode(){
+  var color = document.getElementById("myColor").value
+  $('body').css('color', color);
+  $('body').css('font-family', 'courier');
+  $('p').css('color', color);
+  $('a').css('color', color);
+  $('button').css('background', 'linear-gradient(to bottom, antiquewhite 5%, white 100%)')
+  $('button').css('font-family', 'courier');
+  $('button').css('color', color);
+}
